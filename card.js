@@ -11,7 +11,6 @@ const fs = require('fs');
 const request = require('request');
 const path = require('path');
 const ora = require('ora');
-const DownloaderHelper = require('node-downloader-helper');
 const cliSpinners = require('cli-spinners');
 clear();
 
@@ -27,7 +26,7 @@ const questions = [
                 name: `Send me an ${chalk.green.bold("email")}?`,
                 value: () => {
                     open("mailto:colehausman@gmail.com");
-                    console.log("\nDone, see you soon at inbox.\n");
+                    console.log("\nDone, can't wait to connect!\n");
                 }
             },
             {
@@ -42,6 +41,23 @@ const questions = [
                     pipe.on("finish", function () {
                         let downloadPath = path.join(process.cwd(), 'cole_hausman-resume.pdf')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
+                        open(downloadPath)
+                        loader.stop();
+                    });
+                }
+            },
+            {
+                name: `See a picture of my dog ${chalk.blueBright.bold("Suki")}?`,
+                value: () => {
+                    // cliSpinners.dots;
+                    const loader = ora({
+                        text: ' Getting an image of Suki',
+                        spinner: cliSpinners.material,
+                    }).start();
+                    let pipe = request('https://github.com/ColeH02/about-me/blob/main/IMG_2303.PNG?raw=true').pipe(fs.createWriteStream('./suki.png'));
+                    pipe.on("finish", function () {
+                        let downloadPath = path.join(process.cwd(), 'suki.png')
+                        console.log(`\nSuki saved at ${downloadPath} \n`);
                         open(downloadPath)
                         loader.stop();
                     });
@@ -90,9 +106,9 @@ const me = boxen(
         `${chalk.bold("who is always looking to connect! I'm a")}`,
         `${chalk.bold("Student at Bucknell University and currently")}`
     ].join("\n") + "\n" +
-    chalk.bold("working as a ") +
-    chalk.hex('#e407d2').bold("ServiceNow") +
-    chalk.bold(" Software Engineering Intern."),
+    chalk.bold("working as a Software Engineering Intern") + "\n" +
+    chalk.bold("at") +
+    chalk.hex('#e407d2').bold(" ServiceNow"),
     {
         margin: 1,
         float: 'center',
