@@ -3,7 +3,7 @@
   "version": "1.0.13",
   "main": "card.js",
   "license": "MIT",
-  "bin": "./card.js",
+  "bin": "--experimental-modules ./card.js",
   "dependencies": {
     "boxen": "^7.0.2",
     "chalk": "^5.2.0",
