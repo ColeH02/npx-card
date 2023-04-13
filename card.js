@@ -1,9 +1,17 @@
-import boxen from "boxen";
-import chalk from 'chalk';
-import inquirer from 'inquirer';
-import clear from 'clear';
-import open from 'open';
+#!/usr/bin/env node
 
+'use strict'
+
+const boxen = require("boxen");
+const chalk = require("chalk");
+const inquirer = require("inquirer");
+const clear = require("clear");
+const open = require("open");
+const fs = require('fs');
+const request = require('request');
+const path = require('path');
+const ora = require('ora');
+const cliSpinners = require('cli-spinners');
 clear();
 
 const prompt = inquirer.createPromptModule();
@@ -12,20 +20,36 @@ const questions = [
     {
         type: "list",
         name: "action",
-        message: "What do you want to do?",
+        message: "What you want to do?",
         choices: [
             {
-                // Use chalk to style headers
-                name: `Toss an ${chalk.bold("email")}?`,
+                name: `Send me an ${chalk.green.bold("email")}?`,
                 value: () => {
                     open("mailto:colehausman@gmail.com");
-                    console.log("\nLooking forward to hearing your message and replying to you!\n");
+                    console.log("\nDone, see you soon at inbox.\n");
                 }
             },
             {
-                name: "Exit",
+                name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
                 value: () => {
-                    console.log("Good bye, have a nice day!\n");
+                    // cliSpinners.dots;
+                    const loader = ora({
+                        text: ' Downloading Resume',
+                        spinner: cliSpinners.material,
+                    }).start();
+                    let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./cole-resume.html'));
+                    pipe.on("finish", function () {
+                        let downloadPath = path.join(process.cwd(), 'anmol-resume.html')
+                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
+                        open(downloadPath)
+                        loader.stop();
+                    });
+                }
+            },
+            {
+                name: "Just quit.",
+                value: () => {
+                    console.log("See ya!.\n");
                 }
             }
         ]

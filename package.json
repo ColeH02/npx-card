@@ -1,23 +1,37 @@
 {
   "name": "coleh123",
-  "version": "1.0.15",
+  "version": "1",
+  "description": "A personal card for Cole Hausman",
   "main": "card.js",
-  "license": "MIT",
-  "bin": "./card.js",
-  "dependencies": {
-    "boxen": "^7.0.2",
-    "chalk": "^5.2.0",
-    "clear": "^0.1.0",
-    "colehausman": "^1.0.1",
-    "file-type": "^16.5.3",
-    "inquirer": "^9.1.5",
-    "node-fetch": "^2.6.1",
-    "open": "^9.1.0"
+  "bin": {
+    "cole": "./card.js"
   },
   "scripts": {
-    "dev": "nodemon --experimental-modules card.js"
+    "test": "node card.js",
+    "pub": "npm version major & npm publish"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
+  "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "cli-spinners": "^2.5.0",
+    "inquirer": "^7.3.2",
+    "open": "^7.0.4",
+    "ora": "^5.1.0",
+    "request": "^2.88.2"
+  },
+  "plugins": [
+    "babel-plugin-transform-object-rest-spread"
+  ],
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Anmol Singh <hi@anmolsingh.me> (https://anmolsingh.me/)",
+  "license": "ISC"
 }
