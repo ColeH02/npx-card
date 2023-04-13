@@ -1,8 +1,8 @@
-import {boxen} from 'boxen';
-import {chalk} from 'chalk';
-import {inquirer} from 'inquirer';
-import {clear} from 'clear';
-import {open} from 'open'
+import boxen from "boxen";
+import chalk from 'chalk';
+import inquirer from 'inquirer';
+import clear from 'clear';
+import open from 'open';
 
 // clear the terminal before showing the npx card
 clear()
