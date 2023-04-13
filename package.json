@@ -1,6 +1,6 @@
 {
   "name": "cole_hausman",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "A personal card for Cole Hausman",
   "cole_hausman": "card.js",
   "bin": {
