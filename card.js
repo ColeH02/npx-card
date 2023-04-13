@@ -1,15 +1,10 @@
-#!/usr/bin/env node
+import boxen from "boxen";
+import chalk from 'chalk';
+import inquirer from 'inquirer';
+import clear from 'clear';
+import open from 'open';
 
-'use strict'
-
-
-const boxen = require("boxen");
-const chalk = require("chalk");
-const inquirer = require("inquirer");
-const clear = require("clear");
-const open = require("open");
-
-clear()
+clear();
 
 const prompt = inquirer.createPromptModule();
 

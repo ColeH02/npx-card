@@ -15,7 +15,7 @@
     "open": "^9.1.0"
   },
   "scripts": {
-    "dev": "nodemon card.js"
+    "dev": "nodemon --experimental-modules card.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
