@@ -1,6 +1,6 @@
 {
   "name": "hausman-cole",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "card.js",
   "type": "module",
   "license": "MIT",
