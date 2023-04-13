@@ -1,13 +1,14 @@
 {
-  "name": "npx-card",
+  "name": "colehausman",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "card.js",
   "type": "module",
   "license": "MIT",
   "dependencies": {
     "boxen": "^7.0.2",
     "chalk": "^5.2.0",
     "clear": "^0.1.0",
+    "colehausman": "^1.0.1",
     "file-type": "^16.5.3",
     "inquirer": "^9.1.5",
     "node-fetch": "^2.6.1",
