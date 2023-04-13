@@ -11,6 +11,7 @@ const fs = require('fs');
 const request = require('request');
 const path = require('path');
 const ora = require('ora');
+const DownloaderHelper = require('node-downloader-helper');
 const cliSpinners = require('cli-spinners');
 clear();
 
@@ -37,9 +38,21 @@ const questions = [
                         text: ' Downloading Resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./cole-resume.html'));
+                    /*
+                    const download = new DownloaderHelper('http://github.com/ColeH02/about-me/blob/main/ColeHausmanResume.pdf', './');
+
+                    download.on("end", function () {
+                        let downloadPath = path.join(process.cwd(), 'cole_hausman-resume.pdf')
+                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
+                        open(downloadPath)
+                        loader.stop();
+                    });
+                    download.start();
+                    */
+
+                    let pipe = request('https://raw.githubusercontent.com/ColeH02/about-me/main/ColeHausmanResume.pdf').pipe(fs.createWriteStream('./cole_hausman-resume.pdf'));
                     pipe.on("finish", function () {
-                        let downloadPath = path.join(process.cwd(), 'anmol-resume.html')
+                        let downloadPath = path.join(process.cwd(), 'cole_hausman-resume.pdf')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
                         open(downloadPath)
                         loader.stop();
