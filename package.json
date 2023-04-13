@@ -1,8 +1,8 @@
 {
-  "name": "coleh123",
+  "name": "cole_hausman",
   "version": "1.0.16",
   "description": "A personal card for Cole Hausman",
-  "main": "card.js",
+  "cole_hausman": "card.js",
   "bin": {
     "cole": "./card.js"
   },
