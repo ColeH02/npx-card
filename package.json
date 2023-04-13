@@ -1,6 +1,6 @@
 {
   "name": "coleh123",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "card.js",
   "license": "MIT",
   "bin": "./card.js",
