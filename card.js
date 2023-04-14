@@ -75,17 +75,17 @@ const questions = [
 
 const data = {
     name: chalk.hex('#ffffff').bold("                     Cole Hausman"),
-    fact: chalk.hex('#fafa6e')('If at first you dont succeed try try try try try again'),
+    fact: chalk.hex('#fafa6e')('I love to build! Computers, keyboards,\n                software, you name it!'),
     email: chalk.hex('#c4ec74')("colehausman@gmail.com"),
     github: chalk.hex('#92dc7e')("https://github.com/ColeH02"),
     website: chalk.hex('#64c987')("https://www.linkedin.com/in/cole-hausman"),
     npx: chalk.hex('#39b48e')("npx cole_hausman"),
 
-    labelFact: chalk.hex('#e407d2').bold("          Fun Fact:"),
-    labelEmail: chalk.hex('#be0fc4').bold("          Email:"),
-    labelGitHub: chalk.hex('#9912b5').bold("         GitHub:"),
-    labelWebsite: chalk.hex('#7513a4').bold("       LinkedIn:"),
-    labelCard: chalk.hex('#511191').bold("                  Card:")
+    labelFact: chalk.hex('#e407d2').bold("     Fun Fact:"),
+    labelEmail: chalk.hex('#be0fc4').bold("        Email:"),
+    labelGitHub: chalk.hex('#9912b5').bold("       GitHub:"),
+    labelWebsite: chalk.hex('#7513a4').bold("     LinkedIn:"),
+    labelCard: chalk.hex('#511191').bold("         Card:")
 };
 
 const me = boxen(
