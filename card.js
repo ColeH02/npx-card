@@ -37,7 +37,7 @@ const questions = [
                         text: ' Downloading Resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://raw.githubusercontent.com/ColeH02/about-me/main/ColeHausmanResume.pdf').pipe(fs.createWriteStream('./cole_hausman-resume.pdf'));
+                    let pipe = request('https://raw.githubusercontent.com/ColeHausman/about-me/main/ColeHausmanResume.pdf').pipe(fs.createWriteStream('./cole_hausman-resume.pdf'));
                     pipe.on("finish", function () {
                         let downloadPath = path.join(process.cwd(), 'cole_hausman-resume.pdf')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
@@ -54,7 +54,7 @@ const questions = [
                         text: ' Getting an image of Suki',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://github.com/ColeH02/about-me/blob/main/IMG_2303.PNG?raw=true').pipe(fs.createWriteStream('./suki.png'));
+                    let pipe = request('https://github.com/ColeHausman/about-me/blob/main/IMG_2303.PNG?raw=true').pipe(fs.createWriteStream('./suki.png'));
                     pipe.on("finish", function () {
                         let downloadPath = path.join(process.cwd(), 'suki.png')
                         console.log(`\nSuki saved at ${downloadPath} \n`);
@@ -77,7 +77,7 @@ const data = {
     name: chalk.hex('#ffffff').bold("                     Cole Hausman"),
     fact: chalk.hex('#fafa6e')('I love to build! Computers, keyboards,\n                software, you name it!'),
     email: chalk.hex('#c4ec74')("colehausman@gmail.com"),
-    github: chalk.hex('#92dc7e')("https://github.com/ColeH02"),
+    github: chalk.hex('#92dc7e')("https://github.com/ColeHausman"),
     website: chalk.hex('#64c987')("https://www.linkedin.com/in/cole-hausman"),
     npx: chalk.hex('#39b48e')("npx cole_hausman"),
 
