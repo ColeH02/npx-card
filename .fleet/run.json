@@ -1,0 +1,8 @@
+{
+    "configurations": [
+        {"name": "Run my script",
+            "type": "command",
+            "program": "$PROJECT_DIR$/card.js",
+        }
+    ]
+}

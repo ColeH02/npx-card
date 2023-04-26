@@ -75,13 +75,13 @@ const questions = [
 
 const data = {
     name: chalk.hex('#ffffff').bold("                     Cole Hausman"),
-    fact: chalk.hex('#fafa6e')('I love to build! Computers, keyboards,\n                software, you name it!'),
+    fact: chalk.hex('#fafa6e')("                ___\n                    __/_  `.  .-\"\"\"-.\n                    \\_,` | \-'  /   )`-')\n                     \"\") \`\"\`    \  ((\`\"\`\n                   ____Y ,    .'7 /|\n                  (_,___/...-` (_/_/"),
     email: chalk.hex('#c4ec74')("colehausman@gmail.com"),
     github: chalk.hex('#92dc7e')("https://github.com/ColeHausman"),
     website: chalk.hex('#64c987')("https://www.linkedin.com/in/cole-hausman"),
     npx: chalk.hex('#39b48e')("npx cole_hausman"),
 
-    labelFact: chalk.hex('#e407d2').bold("     Fun Fact:"),
+    labelFact: chalk.hex('#e407d2').bold("     "),
     labelEmail: chalk.hex('#be0fc4').bold("        Email:"),
     labelGitHub: chalk.hex('#9912b5').bold("       GitHub:"),
     labelWebsite: chalk.hex('#7513a4').bold("     LinkedIn:"),
